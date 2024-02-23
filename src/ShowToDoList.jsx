@@ -5,7 +5,9 @@ function ShowToDoList({ task, deleteToDoItems, editToDoItems, checkedItem }) {
   return (
     <div className="toDo">
       <Checkbox onClick={checkedItem} />
-      <h4 onClick={editToDoItems}>{task}</h4>
+      <h4 className="ellipsis" onClick={editToDoItems}>
+        {task}
+      </h4>
       <TrashIcon onClick={deleteToDoItems} />
     </div>
   );

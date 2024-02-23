@@ -72,7 +72,11 @@
   }
   body {
     @apply bg-background text-foreground;
-    background-color: #6fa2d5;
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(0, 212, 255, 1) 100%
+    );
   }
 }
 
@@ -102,8 +106,6 @@ h1 {
   padding: 2rem;
   border-radius: 5px;
   width: 60%;
-
-  background-color: #0f4a85;
 }
 .s {
   margin-left: 12%;
@@ -141,4 +143,10 @@ h1 {
   padding: 2rem;
   border-radius: 5px;
   width: 60%;
+}
+
+.ellipsis {
+  text-overflow: ellipsis; /* enables ellipsis */
+  white-space: nowrap; /* keeps the text in a single line */
+  overflow: hidden; /* keeps the element from overflowing its parent */
 }
