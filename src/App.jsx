@@ -50,11 +50,12 @@ function App() {
           {toDoItems
             .slice()
             .sort((a, b) => b.id - a.id)
-            .map((item) =>
+            .map((item, index) =>
               item.editing ? (
                 <EditToDoList editToDoItems={editItem} item={item} />
               ) : !item.checked ? (
                 <ShowToDoList
+                  key={index}
                   task={item.task}
                   deleteToDoItems={() => deleteToDoItems(item.id)}
                   editToDoItems={() => editToDoItems(item.id)}
